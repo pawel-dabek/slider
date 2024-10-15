@@ -1,0 +1,49 @@
+.card-slider-block {
+  .block-editor-block-list__layout {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 5px;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+
+    &::-webkit-scrollbar {
+      height: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--wp--preset--color--gray-300);
+      height: 12px;
+      border-radius: 9999px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    & > * {
+      scroll-snap-align: center;
+      width: calc(100% / 3 - 20px * 2 / 3);
+      min-width: calc(100% / 3 - 20px * 2 / 3);
+
+      @media (max-width: 1023px) {
+        width: calc(100% / 2 - 20px * 2 / 2);
+        min-width: calc(100% / 2 - 20px * 2 / 2);
+      }
+
+      @media (max-width: 575px) {
+        width: 100%;
+        min-width: 100%;
+      }
+    }
+
+    .block-list-appender {
+      position: relative;
+
+      .block-editor-inserter {
+        position: relative;
+      }
+    }
+  }
+}
+
+@import 'style';

@@ -1,0 +1,103 @@
+.card-slider-block {
+  position: relative;
+  padding: 60px 0;
+
+  @media (max-width: 1280px) {
+    padding: 48px 0;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 36px 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 24px 0;
+  }
+
+  &__upper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 56px !important;
+
+    @media (max-width: 1280px) {
+      margin-bottom: 48px !important;
+    }
+
+    @media (max-width: 1024px) {
+      margin-bottom: 40px !important;
+    }
+
+    @media (max-width: 767px) {
+      margin-bottom: 32px !important;
+    }
+  }
+
+  &__title {
+    font-size: var(--wp--preset--font-size--6-xl);
+    font-weight: 500;
+
+    @media (max-width: 1024px) {
+      font-size: var(--wp--preset--font-size--5-xl);
+    }
+
+    @media (max-width: 767px) {
+      font-size: var(--wp--preset--font-size--4-xl);
+    }
+  }
+
+  &__arrows {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    .card-slider-block__arrow--prev {
+      @media (max-width: 575px) {
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        transform: translateY(-11px);
+        z-index: 10;
+      }
+    }
+
+    .card-slider-block__arrow--next {
+      @media (max-width: 575px) {
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        transform: translateY(-11px);
+        z-index: 10;
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    width: min-content !important;
+    margin-left: auto;
+    margin-right: auto;
+
+    .swiper-pagination-bullet {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 10px;
+      height: 10px;
+      border: 1px solid var(--wp--preset--color--black-500);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      opacity: 100;
+      border-radius: 100%;
+
+      &-active {
+        background-color: var(--wp--preset--color--black-500);
+      }
+    }
+  }
+}

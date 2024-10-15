@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/slider",
+  "version": "0.1.0",
+  "title": "Slider",
+  "category": "design",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Slider title"
+    },
+    "showTitle": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "slider",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}
